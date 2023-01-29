@@ -1,0 +1,25 @@
+.nav-link {
+  font-size: large;
+}
+
+.gr {
+  background-color: #009e4d !important;
+}
+
+.wh{
+color: white;
+}
+
+.dgr{
+  background-color: #325329a6;
+}
+
+.nav-pills {
+  --bs-nav-pills-border-radius: 0.375rem;
+  --bs-nav-pills-link-active-color: #fff;
+  --bs-nav-pills-link-active-bg: #2e7b29;
+}
+
+.nav-link{
+  color: white;
+}
