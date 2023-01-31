@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { EmployeeAddComponent } from './employee/employee-add.component';
-import { EmployeeDetailComponent } from './employee/employee-detail.component';
-import { EmployeeUpdateComponent } from './employee/employee-update.component';
-import { EmployeeComponent } from './employee/employee.component';
+import { EmployeeAddComponent } from './employee/employee-add/employee-add.component';
+import { EmployeeDetailComponent } from './employee/employee-detail/employee-detail.component';
+import { EmployeeUpdateComponent } from './employee/employee-update/employee-update.component';
+import { EmployeeComponent } from './employee/employee-list/employee.component';
 import { WelcomeComponent } from './home/welcome.component';
 
 const routes: Routes = [];

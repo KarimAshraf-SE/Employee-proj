@@ -1,0 +1,65 @@
+<mat-card>
+  <mat-card-header> Create Employee </mat-card-header>
+  <br />
+  <mat-card-content>
+    <form (ngSubmit)="onSubmit()">
+      <mat-form-field class="example-full-width">
+        <mat-label>First Name</mat-label>
+        <input
+          matInput
+          placeholder="Ex. Jon"
+          id="firstName"
+          [(ngModel)]="employee!.firstName"
+          name="firstName"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Last Name</mat-label>
+        <input
+          matInput
+          placeholder="Ex. Doe"
+          id="lastName"
+          [(ngModel)]="employee!.lastName"
+          name="lastName"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Age</mat-label>
+        <input
+          matInput
+          placeholder="Ex. 30"
+          id="age"
+          [(ngModel)]="employee!.age"
+          name="age"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          placeholder="Ex. x@y.com"
+          id="email"
+          [(ngModel)]="employee!.email"
+          name="emailId"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Hiring Date</mat-label>
+        <input
+          matInput
+          placeholder="Ex. May 5, 2009"
+          id="hiringDate"
+          [(ngModel)]="employee!.hiringDate"
+          name="hiringDate"
+        />
+      </mat-form-field>
+
+      <br />
+      <button mat-raised-button color="primary" type="submit">submit</button>
+    </form>
+  </mat-card-content>
+</mat-card>

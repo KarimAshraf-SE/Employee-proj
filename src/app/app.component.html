@@ -1,11 +1,14 @@
 <h1 style='text-align: center; background-color: #009e4d; margin-bottom: 0rem;'>{{pageTitle}}</h1>
-<nav class='navbar navbar-expand navbar-light bg-light gr'>
+<nav mat-tab-nav-bar class="gr">
   <ul class='nav nav-pills' style="margin-left: 1rem;">
-    <li><a class='nav-link' routerLinkActive='active' routerLink='/welcome'>Home</a></li>
-    <li><a class='nav-link' routerLinkActive='active' routerLink='/employees'>Employees List</a></li>
-    <li><a class='nav-link' routerLinkActive='active' routerLink='/employees-create'>Add Employee</a></li>
+    <li><a mat-tab-link routerLinkActive='active' routerLink='/welcome'>Home</a></li>
+    <li><a mat-tab-link routerLinkActive='active' routerLink='/employees'>Employees List</a></li>
+    <li><a mat-tab-link routerLinkActive='active' routerLink='/employees-create'>Add Employee</a></li>
   </ul>
 </nav>
 <div class='container'>
   <router-outlet></router-outlet>
 </div>
+
+
+<router-outlet></router-outlet>

@@ -1,20 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EmployeeComponent } from './employee/employee.component';
+import { EmployeeComponent } from './employee/employee-list/employee.component';
 import { HttpClientModule } from '@angular/common/http';
-import { EmployeeDetailComponent } from './employee/employee-detail.component';
+import { EmployeeDetailComponent } from './employee/employee-detail/employee-detail.component';
 import { WelcomeComponent } from './home/welcome.component';
-import { EmployeeData } from './employee/employee-data';
-import { EmployeeAddComponent } from './employee/employee-add.component';
-import { EmployeeUpdateComponent } from './employee/employee-update.component';
-import { MatTableModule } from '@angular/material/table';
-import {MatButtonModule} from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
-import {MatInputModule} from '@angular/material/input';
+import { EmployeeAddComponent } from './employee/employee-add/employee-add.component';
+import { EmployeeUpdateComponent } from './employee/employee-update/employee-update.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -29,11 +25,7 @@ import {MatInputModule} from '@angular/material/input';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
-    MatTableModule,
-    MatButtonModule,
-    MatCardModule,
-    MatInputModule,
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

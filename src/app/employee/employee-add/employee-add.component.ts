@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { IEmployee } from './employee';
-import { EmployeeService } from './employee.service';
+import { IEmployee } from '../employee';
+import { EmployeeService } from '../employee-service/employee.service';
 
 @Component({
   selector: 'pm-employee-add',

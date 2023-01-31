@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { IEmployee } from './employee';
-import { EmployeeService } from './employee.service';
+import { IEmployee } from '../employee';
+import { EmployeeService } from '../employee-service/employee.service';
 
 @Component({
   selector: 'pm-employee-update',

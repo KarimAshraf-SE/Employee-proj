@@ -1,0 +1,42 @@
+<mat-card>
+  <mat-card-header>
+    {{ pageTitle + ": " + employee?.firstName + " " + employee?.lastName }}
+  </mat-card-header>
+  <br />
+  <mat-card-content *ngIf="employee">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-md-4">ID:</div>
+          <div class="col-md-8">{{ employee.id }}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">First Name:</div>
+          <div class="col-md-8">{{ employee.firstName }}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">Last Name:</div>
+          <div class="col-md-8">{{ employee.lastName }}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">Age:</div>
+          <div class="col-md-8">{{ employee.age }}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">Email:</div>
+          <div class="col-md-8">{{ employee.email }}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">Hiring Date:</div>
+          <div class="col-md-8">{{ employee.hiringDate }}</div>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+  <br />
+  <mat-card-footer>
+    <button mat-stroked-button (click)="onBack()">
+      <i class="fa fa-chevron-left"></i> Back
+    </button>
+  </mat-card-footer>
+</mat-card>
