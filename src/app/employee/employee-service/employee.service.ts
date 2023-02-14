@@ -34,7 +34,7 @@ export class EmployeeService {
   }
 
   updateEmployee(id: number, employee: IEmployee): Observable<Object>{
-    return this.http.put(`${this.employeeUrl}/${id}`, employee);
+    return this.http.patch(`${this.employeeUrl}/${id}`, employee);
   }
 
   deleteEmployee(id: number): Observable<Object>{

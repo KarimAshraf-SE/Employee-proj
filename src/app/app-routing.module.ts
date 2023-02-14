@@ -10,17 +10,20 @@ const routes: Routes = [];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot([
-      { path: 'employees', component: EmployeeComponent },
-      { path: 'employees/:id', component: EmployeeDetailComponent },
-      { path: 'welcome', component: WelcomeComponent },
-      { path: 'employees-create', component: EmployeeAddComponent },
-      { path: 'employee-update/:id', component: EmployeeUpdateComponent },
+    RouterModule.forRoot(
+      [
+        { path: 'employees', component: EmployeeComponent },
+        { path: 'employees/:id', component: EmployeeDetailComponent },
+        { path: 'welcome', component: WelcomeComponent },
+        { path: 'employees-create', component: EmployeeAddComponent },
+        { path: 'employee-update/:id', component: EmployeeUpdateComponent },
 
-      { path: '', redirectTo: 'welcome', pathMatch: 'full' },
-      { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
-    ]),
+        { path: '', redirectTo: 'welcome', pathMatch: 'full' },
+        { path: '**', redirectTo: 'welcome', pathMatch: 'full' },
+      ],
+      { onSameUrlNavigation: 'reload' }
+    ),
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -28,9 +28,9 @@ export class EmployeeUpdateComponent {
   onSubmit(){
     this.employeeService.updateEmployee(this.employee!.id, this.employee!).subscribe( data =>{
       console.log(data);
-      this.goToEmployeeList();
     }
     , error => console.log(error));
+    this.goToEmployeeList();
   }
 
   goToEmployeeList(){
