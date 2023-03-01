@@ -9,7 +9,7 @@
 
       <ng-container matColumnDef="ID">
         <th mat-header-cell *matHeaderCellDef>ID</th>
-        <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+        <td mat-cell *matCellDef="let element">{{ element._id }}</td>
       </ng-container>
 
       <!-- Position Column -->
@@ -44,11 +44,11 @@
       <ng-container matColumnDef="OPS">
         <th mat-header-cell *matHeaderCellDef>OPS</th>
         <td mat-cell *matCellDef="let element">
-          <a [routerLink]="['/employee-update', element.id]">
+          <a [routerLink]="['/employee-update', element._id]">
             <button
               mat-raised-button
               color="primary"
-              (click)="updateEmployee(element.id)"
+              (click)="updateEmployee(element._id)"
             >
               Update
             </button>
@@ -56,15 +56,15 @@
           <button
             mat-raised-button
             color="warn"
-            (click)="deleteEmployee(element.id)"
+            (click)="deleteEmployee(element._id)"
           >
             Delete
           </button>
-          <a [routerLink]="['/employees', element.id]">
+          <a [routerLink]="['/employees', element._id]">
             <button
               mat-raised-button
               color="primary"
-              (click)="employeeDetails(element.id)"
+              (click)="employeeDetails(element._id)"
             >
               View
             </button>

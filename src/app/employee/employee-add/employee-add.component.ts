@@ -14,7 +14,6 @@ export class EmployeeAddComponent implements OnInit {
   employees: IEmployee[] = [];
 
   employee: IEmployee = {
-    id: 0,
     firstName: '',
     lastName: '',
     age: 0,
@@ -22,7 +21,6 @@ export class EmployeeAddComponent implements OnInit {
     hiringDate: '',
   };
   sub!: Subscription;
-  id!: number;
 
   constructor(
     private employeeService: EmployeeService,
@@ -30,24 +28,10 @@ export class EmployeeAddComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.sub = this.employeeService.getEmployees().subscribe({
-      next: (employees) => {
-        this.employees = employees;
 
-        var largest = 0;
-        employees.forEach( elem => {
-          if (largest < elem.id){ 
-          largest = elem.id;
-          }
-          this.id = largest+1
-        });
-        console.log(this.id);
-      },
-    });
   }
 
   saveEmployee() {
-    this.employee.id = this.id;
     this.sub = this.employeeService.createEmployee(this.employee).subscribe(
       (data) => {
         console.log(data);

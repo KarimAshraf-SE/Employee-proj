@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { ApolloModule } from 'apollo-angular';
+import { HttpLinkModule } from 'apollo-angular-link-http';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,6 +29,8 @@ import { SharedModule } from './shared/shared.module';
     AppRoutingModule,
     HttpClientModule,
     SharedModule,
+    ApolloModule,
+    HttpLinkModule
   ],
   providers: [],
   bootstrap: [AppComponent]

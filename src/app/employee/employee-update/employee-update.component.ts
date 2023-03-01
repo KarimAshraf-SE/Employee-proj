@@ -10,7 +10,7 @@ import { EmployeeService } from '../employee-service/employee.service';
 })
 export class EmployeeUpdateComponent {
 
-  employee:IEmployee | undefined;
+  employee:any;
   errorMessage = '';
 
   constructor(private employeeService: EmployeeService,
@@ -18,7 +18,7 @@ export class EmployeeUpdateComponent {
     private router: Router) { }
 
   ngOnInit(): void {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
+    const id = String(this.route.snapshot.paramMap.get('id'));
     if (id) {
       this.getEmployee(id);
     }
@@ -26,7 +26,8 @@ export class EmployeeUpdateComponent {
   }
 
   onSubmit(){
-    this.employeeService.updateEmployee(this.employee!.id, this.employee!).subscribe( data =>{
+    
+    this.employeeService.updateEmployee(this.employee!).subscribe( data =>{
       console.log(data);
     }
     , error => console.log(error));
@@ -37,7 +38,7 @@ export class EmployeeUpdateComponent {
     this.router.navigate(['/employees']);
   }
 
-  getEmployee(id: number): void {
+  getEmployee(id: string): void {
     this.employeeService.getEmployee(id).subscribe({
       next: employee => this.employee = employee,
       error: err => this.errorMessage = err

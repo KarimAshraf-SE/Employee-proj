@@ -35,26 +35,25 @@ export class EmployeeComponent implements OnInit, OnDestroy {
     this.sub = this.employeeService.getEmployees().subscribe({
       next: (employees) => {
         this.employees = employees;
-        console.log(employees[employees.length - 1].id);
+        console.log(this.employees)
       },
       error: (err) => (this.errorMessage = err),
     });
   }
 
-  employeeDetails(id: number) {
+  employeeDetails(id: string) {
     this.router.navigate(['employee-details', id]);
   }
-  updateEmployee(id: number) {
+  updateEmployee(id: string) {
     this.router.navigate(['employee-update', id]);
   }
 
-  deleteEmployee(id: number) {
+  deleteEmployee(id: string) {
     this.employeeService.deleteEmployee(id).subscribe((data) => {
       console.log(data);
       this.sub = this.employeeService.getEmployees().subscribe({
         next: (employees) => {
           this.employees = employees;
-          console.log(employees[employees.length - 1].id);
         },
         error: (err) => (this.errorMessage = err),
       });
